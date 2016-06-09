@@ -1,0 +1,35 @@
+﻿@model PNFun.Models.Category
+
+@{
+    ViewBag.Title = "Pacific Northwest Fun Home Page";
+}
+<div class="homePage">
+    <div class="container body-content">
+
+        <div class="Welcome">
+            <p>Welcome Home</p>
+        </div>
+
+        <div class="titleImage">            
+            <p class="titleText">Pacific <br /> Northwest<br /> Fun</p>
+        </div>
+
+        <div></div>
+
+        <div class="Instructions">
+            <p>Select a General Category</p>
+        </div>
+
+        @foreach (var item in ViewBag.Categories)
+        {
+            <div class="img">
+                <a href=@ViewBag.LinkString/@item.ID>  <img src=@item.PhotoLocation alt=@item.AltDescription width="210" height="190">  </a>
+                <div class="desc">@item.Name</div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+

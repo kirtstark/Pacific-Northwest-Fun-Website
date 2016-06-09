@@ -1,0 +1,52 @@
+﻿@model PNFun.Models.Message
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="messageBoard">
+    <div class="container body-content">
+        <div class="fire">
+            <h2>Create Message</h2>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <div style="text-align:left">
+                    <div class="form-horizontal">
+                        <h4>Message</h4>
+                        <hr />
+                        @Html.ValidationSummary(true)
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Title, new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Title)
+                                @Html.ValidationMessageFor(model => model.Title)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MessageText, new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.MessageText)
+                                @Html.ValidationMessageFor(model => model.MessageText)
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Create" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            <img src="/Content/Images/Fire.gif" alt="Cabin Fire" width="342" height="342">
+            <div>
+                @Html.ActionLink("Back to Main Message Board", "Index", "MessageBoard")
+            </div>
+        </div>
+        </div>
+    </div>

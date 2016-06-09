@@ -1,0 +1,67 @@
+﻿@model IEnumerable<PNFun.Models.RecreationSite>
+
+@{
+    ViewBag.Title = "Select";
+}
+
+<div class="RecSites">
+    <div style="float:left">
+        <img src="/Content/Images/Ad1.jpg" alt="Ad1" width="100">
+    </div>
+    <div class="container body-content">
+        <div class="inRecSites">
+            <h2>Select</h2>
+            <h1> @ViewBag.ID</h1>
+
+
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Rating)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.access)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.restrooms)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cost)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Rating)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.access)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.restrooms)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cost)
+                        </td>
+
+                        <td>
+
+                            @Html.ActionLink("Select For Details", "Details", new { id = item.ID })
+
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+        </div>
+</div>

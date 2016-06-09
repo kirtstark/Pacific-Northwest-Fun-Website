@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <style>
+        div.fire {
+            background-image: url("/Content/Images/brick5.jpg");
+            color: antiquewhite;
+            text-align: center;
+        }
+
+        .Search {
+            background-image: url("/Content/Images/Wood5.jpg");
+            background-size: 100%;
+            background-attachment: scroll;
+            background-repeat: repeat;
+            min-height: 1000px;
+        }
+        
+        /*This section describes the div for simple instructions*/
+        div.Instructions {
+            font-family: Algerian, serif;
+            background-image: url("/Content/Images/Wood3.jpg");
+            color: antiquewhite;
+            text-align: center;
+            font-size: 70px;
+        }
+
+        /*This section renders the photo links*/
+        div.img {
+            padding: 10px;
+            border: 1px solid black;
+            height: auto;
+            width: auto;
+            float: left;
+            text-align: center;
+            background-color: rgba(20, 0, 0, .8);
+            
+        }
+
+            div.img img {
+                
+                display: inline;
+                margin: 5px;
+                border: 2px solid #ffffff;
+            }
+
+            div.img a:hover img {
+                opacity: 1;
+                border: 1px solid #0000ff;
+            }
+
+        div.desc {
+            text-align: center;
+            color: azure;
+            font-weight: 800;
+            width: 220px;
+            margin: 5px;
+        }
+
+        /*This section sets the format for the footer*/
+        footer {
+            background-image: url("/Content/Images/Wood3.jpg");
+            width: 100%;
+            background-size: 100%;
+            min-height: 100%;
+            color: antiquewhite;
+            text-align: center;
+            min-height: 200px;
+        }
+
+        .articles {
+            color: antiquewhite;
+            font-family: serif;
+            
+            background-color: rgba(20, 0, 0, .5);
+            font-size: 30px;
+            height: 100%;
+            width: 20%;
+            margin: 4px;
+            height: auto;
+            float: left;
+            text-align: center;
+        }
+
+        .article {
+            color: antiquewhite;
+            font-family: 'Baskerville Old Face', serif;
+            background-image: url("/Content/Images/Wood4.jpg");
+            font-size: 25px;
+            background-size: 100%;
+            min-height: 100%;
+            height: auto;
+            background-attachment: scroll;
+            min-height: 800px;
+            width: 100%;
+            background-color: rgba(20, 0, 0, .8);
+        }
+
+        .articleHead {
+            font-size: 50px;
+            font-family: Algerian, serif;
+        }
+        .messageBoard {
+            color: antiquewhite;
+            background-image: url("/Content/Images/Wood4.jpg");
+            background-size: 100%;
+            font-size: 25px;
+            font-family: serif;
+            background-size: 100%;
+            min-height: 100%;
+            height: auto;
+            background-attachment: scroll;
+            min-height: 1000px;
+            width: 100%;
+            background-attachment: scroll;
+            background-color: rgba(20, 0, 0, .8);
+        }
+
+        .messageText {
+            background-color: rgba(20, 0, 0, .8);
+        }
+
+        .articleText {
+            background-color: rgba(20, 0, 0, .8);
+        }
+
+
+        p.ex1 {
+            margin: 2cm 4cm 3cm 4cm;
+        }
+
+        .homePage {
+            background-image: url("/Content/Images/Landscape 667.jpg");
+            background-size: 100%;
+            min-height: 100%;
+            background-attachment: fixed;
+        }
+
+        .subCategory {
+            background-size: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100%;
+            height: auto;
+            /*background-attachment: scroll;*/
+            min-height: 1000px;
+            width: 100%;
+        }
+        .Welcome {
+            font-family: 'Baskerville Old Face', Serif;
+            text-align: center;
+            font-size: 60px;
+            color: whitesmoke;
+            background-image: url("/Content/Images/Wood3.jpg");
+            background-size: 100%;
+            min-height: 100%;
+            height: auto;
+            width: 100%;
+        }
+
+        .MessageBoard {
+            background-image: url("/Content/Images/Wood4.jpg");
+            background-attachment: fixed;
+        }
+
+        /*This section sets look for recreation sites*/
+        div.RecSites{
+            background-color: rgb(25,50,30);
+        }
+
+        div.inRecSites {
+            background-color: burlywood;
+        }
+
+        /*This section gives the homepage title image and text*/
+        /*<img style="max-width:95%;border:6px solid black;" alt="Pacific Northwest Fun" src="~/photos/MtHood.jpg" / > */
+        .titleImage {
+            background-image: url("/Content/Images/MtHood.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 10px;
+            /*max-width: 100px;
+            height: auto;
+            position: relative;
+            float: none;*/
+            font-size: 100px;
+            color: rgb(20, 235,71);
+            text-align: center;
+        }
+
+            .titleImage .titleText {
+                font-size: 100px;
+                font-family: Algerian, serif;
+                color: rgb(256,50,60);
+                
+            }
+            
+
+        
+    </style>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+    
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Pacific Northwest Fun", "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Message Board", "Index", "MessageBoard")</li>
+                    <li>@Html.ActionLink("Advanced Search", "Search", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+    <footer>
+        <p class="articleHead">Articles</p>
+        
+        <br />
+        <div class="articles">
+            @Html.ActionLink("Dress for Wilderness Success", "Article", "Home")
+        </div>
+        <div class="articles">
+            @Html.ActionLink("Trail Snacks - Edible Plants", "Article", "Home")
+        </div>
+        <div class="articles">
+            @Html.ActionLink("Wilderness Gear You Can't Live Without!", "Article", "Home")
+        </div>
+        <div class="articles">
+            @Html.ActionLink("Tips To Keep You Alive in the Wilds", "Article", "Home")
+        </div>
+        <div class="articles">
+            @Html.ActionLink("Campfire Cooking - Pans That Last", "Article", "Home")
+        </div>
+        <div style="clear:both"></div>
+            &copy; @DateTime.Now.Year - Pacific Northwest Fun
+</footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

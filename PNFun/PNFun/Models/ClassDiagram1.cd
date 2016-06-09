@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PNFun.Models.BadLink">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAhAAAAAAABAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Models\BadLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PNFun.Models.RecreationSite">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAQAAAgAAAAAAAABQCAAAAAAEABAAAAQACAQI=</HashCode>
+      <FileName>Models\RecreationSite.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="comments" />
+      <Property Name="PhotoLinks" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PNFun.Models.PhotoLink">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAACAAggAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Models\PhotoLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PNFun.Models.Category">
+    <Position X="6.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAQgAAAAAAAAAQAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Models\Category.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="RecreationSites" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PNFun.Models.Comments">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAECAAAgAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Comments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PNFun.Models.NonprofitEvent">
+    <Position X="9" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAABAAggAAAAAAgAAAAAAAAAAAAAAAAQgAAIAA=</HashCode>
+      <FileName>Models\NonprofitEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

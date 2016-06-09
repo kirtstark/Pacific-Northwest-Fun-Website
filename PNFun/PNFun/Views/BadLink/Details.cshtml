@@ -1,0 +1,42 @@
+﻿@model PNFun.Models.BadLink
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BadLink</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReportedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecreactionSiteID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecreactionSiteID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BadUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BadUserID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

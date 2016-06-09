@@ -1,0 +1,45 @@
+﻿@model IEnumerable<PNFun.Models.MessageBoard>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="messageBoard">
+    <div class="container body-content">
+        <div class="messageText">
+            <h2>Index</h2>
+
+            <p>
+                @Html.ActionLink("Create New Thread", "Create")
+            </p>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserName)
+                    </th>
+                    
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+                        
+                        <td>
+                            @Html.ActionLink("Enter Thread", "Edit", new { id = item.ID })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+    </div>

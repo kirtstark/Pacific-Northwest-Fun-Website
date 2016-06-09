@@ -1,0 +1,27 @@
+﻿@model PNFun.Models.SubCategory
+
+@{
+    ViewBag.Title = "Select";
+}
+
+<div class="subCategory" style="background-image: url(@ViewBag.Background)">
+    <div class="container body-content">
+        <div></div>
+
+        <div class="Instructions">
+            <p>Select a Specific Category</p>
+        </div>
+
+
+        @foreach (var item in ViewBag.Categories)
+        {
+            <div class="img">
+                <a href=@ViewBag.LinkString/@item.ID><img src=@item.PhotoLocation alt=@item.AltDescription width="210" height="190"></a>
+                <div class="desc">@item.Name</div>
+            </div>
+        }
+        
+    </div>
+   
+</div>
+

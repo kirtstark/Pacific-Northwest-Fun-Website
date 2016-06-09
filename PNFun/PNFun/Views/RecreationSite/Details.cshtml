@@ -1,0 +1,103 @@
+﻿@model PNFun.Models.RecreationSite
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="RecSites">
+    <div style="float:left">
+        <img src="/Content/Images/Ad1.jpg" alt="Ad1" width="100">
+    </div>
+    <div class="container body-content">
+        <div class="inRecSites">
+            <div style="text-align:center">
+        <h2>@Html.DisplayFor(model => model.Name)</h2>
+        <img src=@Model.ImageString alt=@Model.AltDescription width="304" height="228" border="0">
+        </div>
+
+        <div>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Page)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Page)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Rating)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Rating)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.access)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.access)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.restrooms)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.restrooms)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Cost)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Cost)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Directions)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Directions)
+                </dd>
+
+            </dl>
+
+            <div style="font-size:larger">
+            <p style="text-align:center"><a href=@ViewBag.weather@Model.Zipcode target="_blank"><span>Check the Weather</span></a></p>
+                <p style="text-align:center"><a href=@Model.MapLink target="_blank"><span>Get a Map</span></a></p>
+                </div>
+
+            <div class="well">
+                <h3>User Comments:</h3>
+            </div>
+            <div class="well">
+                <h3>User Photo/Video Links:</h3>
+            </div>
+
+            <p style="font-size: larger">
+            @Html.ActionLink("Report Broken or Bad Links", "Select", new { id = @ViewBag.ID })
+                </p>
+            
+           
+        </div>
+            <p style="font-size: larger">
+                @Html.ActionLink("Back to List", "Select", new { id = @ViewBag.ID })
+            </p>
+        </div>
+        <img src="/Content/Images/Ad2.jpg" alt="Ad2" />
+    </div>
+    </div>
